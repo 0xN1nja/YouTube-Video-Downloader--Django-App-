@@ -18,7 +18,6 @@ def analyze_to_mp3(request):
     return render(request,"analyze_to_mp3.html",params)
 def analyze_to_mp4(request):
     link=request.POST.get("link")
-    print(link)
     try:
         yt=YouTube(link)
         ys=yt.streams.get_by_itag("22")
