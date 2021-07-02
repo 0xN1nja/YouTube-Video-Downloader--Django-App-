@@ -18,5 +18,7 @@ from django.urls import path
 from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",views.index,name="Home")
+    path("",views.index,name="Home"),
+    path("analyze_to_mp3",views.analyze_to_mp3,name="Analyze To MP3"),
+    path("analyze_to_mp4",views.analyze_to_mp4,name="Analyze To MP4")
 ]
