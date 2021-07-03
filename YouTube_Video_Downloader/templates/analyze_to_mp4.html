@@ -12,6 +12,7 @@
       <div class="card-body">
         <p>Title : {{ Title }}</p>
         <p>Duration : {{ Duration }}</p>
+        <p>Format : {{ Format }}</p>
         <p>Rating : {{ Rating }}</p>
         <form action="\download" method="post">{% csrf_token %}
           <button class="btn btn-info" type="submit">Download</button>

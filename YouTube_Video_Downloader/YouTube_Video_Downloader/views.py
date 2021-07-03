@@ -24,10 +24,12 @@ def analyze_to_mp4(request):
         yt=YouTube(link)
         ys=yt.streams.get_by_itag("22")
         BASE_DIR = Path(__file__).resolve().parent.parent
-        params={"status":"Successfully Downloaded !","location":f"{os.path.join(BASE_DIR,yt.title)}.mp4","Format":"MP4","Title":yt.title,"Description":yt.description,"Rating":f"{yt.rating}","Duration":f"{yt.length} Seconds"}
+        params={"img":yt.thumbnail_url,"status":"Successfully Downloaded !","location":f"{os.path.join(BASE_DIR,yt.title)}.mp4","Format":"MP4","Title":yt.title,"Description":yt.description,"Rating":f"{yt.rating}","Duration":f"{yt.length} Seconds"}
     except:
         return HttpResponse("<h1>403<br>Please Enter A Valid URL</h1>")
     return render(request,"analyze_to_mp4.html",params)
 def download(request):
     ys.download()
     return HttpResponse("<h1>Downloaded Successfully</h1>")
+def about(request):
+    return render(request,"about.html")

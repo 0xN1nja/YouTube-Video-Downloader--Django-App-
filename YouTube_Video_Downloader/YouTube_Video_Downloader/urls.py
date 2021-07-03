@@ -21,5 +21,6 @@ urlpatterns = [
     path("",views.index,name="Home"),
     path("analyze_to_mp3",views.analyze_to_mp3,name="Analyze To MP3"),
     path("analyze_to_mp4",views.analyze_to_mp4,name="Analyze To MP4"),
-    path("download",views.download,name="Download")
+    path("download",views.download,name="Download"),
+    path("about",views.about,name="About")
 ]
